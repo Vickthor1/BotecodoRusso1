@@ -1,13 +1,15 @@
 # Auto detect text files and perform LF normalization
 * text=auto
 #esta em python
+
 """""""""
 Jogo de bar, com opções baseadas em bebidas, com modos que mudam de acordo com o tipo de bebida que você escolhe 
 O mapa é um bar, com três banheiros, dois andares,e um porão, o salão principalque é onde você se encontra no começo do game.
 
 """""""""
+
 print(
-    'Bem vindo ao "Jogo do Bar", '
+    'Bem vindo ao "Boteco do Ruso", '
     'como todos o lugar infelizmente a morte é algo inevitavel, mas aqui nesse game é evitavel'
     'toda a vez que você "falhar", você volta ao inicio do game então, tenha cuidado com quem conversa'
     '(as escolhas seram feitas com atalho rápido, nas escolhas sem numeração responda o que quiser. Sistema de dinheiro, barra de bebida e modo de jogo, não inclusos na demo)'
