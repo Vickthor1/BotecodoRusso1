@@ -1,2 +1,85 @@
 # Auto detect text files and perform LF normalization
 * text=auto
+#esta em python
+"""""""""
+Jogo de bar, com opções baseadas em bebidas, com modos que mudam de acordo com o tipo de bebida que você escolhe 
+O mapa é um bar, com três banheiros, dois andares,e um porão, o salão principalque é onde você se encontra no começo do game.
+
+"""""""""
+print(
+    'Bem vindo ao "Jogo do Bar", '
+    'como todos o lugar infelizmente a morte é algo inevitavel, mas aqui nesse game é evitavel'
+    'toda a vez que você "falhar", você volta ao inicio do game então, tenha cuidado com quem conversa'
+    '(as escolhas seram feitas com atalho rápido, nas escolhas sem numeração responda o que quiser. Sistema de dinheiro, barra de bebida e modo de jogo, não inclusos na demo)'
+    )
+
+#introdução do jogo
+
+nome = input('Qual o seu nome? ')
+print('Chegou a sexta feira, dia da semana que o filho chora e a mãe não vê, '
+      f'{nome} quer curtir a sua grande noite com tudo que ela pode oferecer,'
+      )
+print('Você vê que tem um bar novo')
+
+começo = True
+
+while começo:
+    bar = input('(1)Você quer ir a esse bar ou (2)não ir e ficar em casa? ')
+    if bar == '1':
+        print('Você decide ir ao bar novo')
+        break
+    elif bar == '2':
+        print('Você decide ficar na sua casa assistindo séria e comendo pipoca')
+        quit
+    else:
+        print('Não entendi(digite 1 ou 2)')
+        pass
+
+veiculo = True
+
+while veiculo:
+    veiculo_que_sera_usado = input('(1)você prefere ir andando ou (2)de moto? ')
+    if veiculo_que_sera_usado == '1':
+        andando = True
+        moto = False
+        dificuldade = 'você andou bastante até chegar no bar novo'
+        print('INFORMAÇÂO GUARDADA!')
+        break
+    elif veiculo_que_sera_usado == '2':
+        moto = True
+        andando = False
+        dificuldade = 'você chegou rapidinho no bar novo'
+        print('INFORMAÇÂO GUARDADA!')
+        break
+    else:
+        print('Não compreendi(digite 1 ou 2)')
+        pass
+
+print(f'{dificuldade}, você vê que tem um amigo seu lá')
+while True:
+    primeira_fala = input('(1)Vai cumprimenta-lo ou (2)não? ')
+    if primeira_fala == '1':
+        personagem1_Jake = True
+        barman = False
+        print('Você decide falar com ele')
+        break
+    elif primeira_fala == '2':
+        barman = True
+        personagem1_Jake = False
+        print('Você ignora o Jake e logo vai falar com o barman')
+        break
+    else:
+        print('Não compreendi(digite 1 ou 2)')
+        pass
+
+while barman:
+    print(f'{nome}: Olá boa noite, poderia me servir uma bebida?')
+    print('Barman: Por que toda essa formalidade amigão, pode ficar à vontade')
+    print('Barman: Temos, vodka, cachaça, whisky, vinho, skol, heineken, brahma, Itaipava...')
+    print('Você acaba não prestando muita atenção nas outras coisas que ele diz')
+    bebida = input(f'{nome}: Eu gostaria de pedir ')
+    break
+while personagem1_Jake:
+    print(f'{nome}: Fala ai Jake! ')
+    break
+print('boa noite')
