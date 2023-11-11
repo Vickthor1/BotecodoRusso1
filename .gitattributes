@@ -1,16 +1,18 @@
-# Auto detect text files and perform LF normalization
-* text=auto
-#esta em python
+"""""""""
+Jogo de bar que se chama Bar do Russo, com opções numéricas de acordo com o avanço do game. 
 
 """""""""
-Jogo de bar, com opções baseadas em bebidas, com modos que mudam de acordo com o tipo de bebida que você escolhe 
-O mapa é um bar, com três banheiros, dois andares,e um porão, o salão principalque é onde você se encontra no começo do game.
+import sys,time,random
 
-"""""""""
+def sprint(str):
+   for c in str + '\n':
+     sys.stdout.write(c)
+     sys.stdout.flush()
+     time.sleep(3./90)
 
-print(
-    'Bem vindo ao "Boteco do Russo", '
-    'como todos o lugar infelizmente a morte é algo inevitável, mas aqui nesse game é evitável'
+sprint(
+    'Bem vindo ao "Boteco don Russo", '
+    'como todos o lugar infelizmente a falha é algo inevitavel, mas aqui nesse game é evitavel'
     'toda a vez que você "falhar", você volta ao inicio do game então, tenha cuidado com quem conversa'
     '(as escolhas seram feitas com atalho rápido, nas escolhas sem numeração responda o que quiser. Sistema de dinheiro, barra de bebida e modo de jogo, não inclusos na demo)'
     )
@@ -18,70 +20,287 @@ print(
 #introdução do jogo
 
 nome = input('Qual o seu nome? ')
-print('Chegou a sexta feira, dia da semana que o filho chora e a mãe não vê, '
+sprint('Chegou a sexta feira, dia da semana que o filho chora e a mãe não vê, '
       f'{nome} quer curtir a sua grande noite com tudo que ela pode oferecer,'
       )
-print('Você vê que tem um bar novo')
+sprint('Você vê que tem um bar novo')
 
 começo = True
 
 while começo:
     bar = input('(1)Você quer ir a esse bar ou (2)não ir e ficar em casa? ')
     if bar == '1':
-        print('Você decide ir ao bar novo')
+        sprint('Você decide ir ao bar novo')
         break
     elif bar == '2':
-        print('Você decide ficar na sua casa assistindo séria e comendo pipoca')
-        quit
+        sprint('Você decide ficar na sua casa assistindo séria e comendo pipoca')
+        break
     else:
-        print('Não entendi(digite 1 ou 2)')
+        sprint('Não entendi(digite 1 ou 2)')
         pass
 
 veiculo = True
+moto = False
+andando = False
 
 while veiculo:
     veiculo_que_sera_usado = input('(1)você prefere ir andando ou (2)de moto? ')
     if veiculo_que_sera_usado == '1':
         andando = True
-        moto = False
         dificuldade = 'você andou bastante até chegar no bar novo'
-        print('INFORMAÇÂO GUARDADA!')
+        sprint('INFORMAÇÂO GUARDADA!')
         break
     elif veiculo_que_sera_usado == '2':
         moto = True
-        andando = False
         dificuldade = 'você chegou rapidinho no bar novo'
-        print('INFORMAÇÂO GUARDADA!')
+        sprint('INFORMAÇÂO GUARDADA!')
         break
     else:
-        print('Não compreendi(digite 1 ou 2)')
+        sprint('Não compreendi(digite 1 ou 2)')
         pass
 
-print(f'{dificuldade}, você vê que tem um amigo seu lá')
+personagem1_Jack = False
+barman = False
+
+sprint(f'{dificuldade}, você vê que tem um amigo seu lá')
 while True:
     primeira_fala = input('(1)Vai cumprimenta-lo ou (2)não? ')
     if primeira_fala == '1':
-        personagem1_Jake = True
-        barman = False
-        print('Você decide falar com ele')
+        personagem1_Jack = True
+        sprint('Você decide falar com ele')
         break
     elif primeira_fala == '2':
         barman = True
-        personagem1_Jake = False
-        print('Você ignora o Jake e logo vai falar com o barman')
+        sprint('Você ignora o Jack e logo vai falar com o barman')
         break
     else:
         print('Não compreendi(digite 1 ou 2)')
         pass
 
+mapa = False
+
 while barman:
-    print(f'{nome}: Olá boa noite, poderia me servir uma bebida?')
-    print('Barman: Por que toda essa formalidade amigão, pode ficar à vontade')
-    print('Barman: Temos, vodka, cachaça, whisky, vinho, skol, heineken, brahma, Itaipava...')
-    print('Você acaba não prestando muita atenção nas outras coisas que ele diz')
+    sprint(f'{nome}: Olá boa noite, poderia me servir uma bebida?')
+    sprint('Barman: Por que toda essa formalidade amigão, pode ficar à vontade')
+    sprint('Barman: Temos, vodka, cachaça, whisky, vinho, skol, heineken, brahma, Itaipava...')
+    sprint('Você acaba não prestando muita atenção nas outras coisas que ele diz')
     bebida = input(f'{nome}: Eu gostaria de pedir ')
-    break
-while personagem1_Jake:
-    print(f'{nome}: Fala ai Jake! ')
-    break
-print('boa noite')
+    sprint('Você bate um papo com o Barman e elete conta a História do Bar e que ele e a filia dele reabriram o bar no Brasil, pelo fato do país deles estarem em guerra e eles não apoiarem isso')
+    sprint('Barman: Você é um bom ouvinte meu jovem, meu nome é Alexandre mas pode e chamar de Lex')
+    sprint(f'{nome}: meu nome é {nome}, prazer em conhecer o senhor')
+    explorar = input('Você quer (1)explorar o mapa ou (2)quer ir para sua casa? ')
+    if explorar == '1':
+        mapa = True
+        break
+    elif explorar =='2':
+        mapa = False
+        break
+    else:
+        ('Só números')
+        pass
+#fim do dialogo com o Lex
+
+pergunta = False
+while personagem1_Jack:
+    sprint(f'{nome}: Fala ai Jake! ')
+    sprint('Jack: Eae,veio aproveitar a sexta?')
+    sprint(f'{nome}: Sim, essa semana foi tortura')
+    sprint('Jack: Vou ficar aqui com você na mesa vlw? e me paga uma cerveja ai')
+    sprint('Mas Jack sou eu que to em pé')
+    sprint('Vocês começam a rir da situação')
+    sprint('Jack: Mas ai namoral, paga uma breja ai?')
+    decisam = input('(1)Deixar Jack sózinho e explorar o mapa ou (2)bater um papo com Jack')
+    if decisam == '1':
+        sprint('Jack vou ter que vazar, vai dar não')
+        mapa = True
+        break
+    elif decisam == '2':
+        sprint('Ta bom mano, desce uma cerveja pra esse maluco aqui!')
+        sprint('Você olha pro banheiro feminino e tem uma leve impressam de ter visto um rosto conhecido indo pra dentro do banheiro')
+        sprint(f'Jack: O que é que foi hein {nome}, ta de olho em alguma gatinha? ')
+        pergunta = True
+        break
+    else:
+      sprint('Números por favor!')
+
+personagem1_JackSim = False
+personagem1_JackNão = False
+personagem1_Jackbravo = False
+Deixar_ele_sozinho = False
+Desculpas = False
+Porrada = False    
+
+while pergunta:
+    pandora = input('Chegou a hora, qual decisão será feita, você vai falar que (1)sim, vai dizer que (2)não ou (3)Ser grosso')
+    if pandora =='1':
+       personagem1_JackSim = True
+       break
+    elif pandora == '2':
+       personagem1_JackNão = True
+       break
+    elif pandora == '3':
+       personagem1_Jackbravo = True
+       break
+    else:
+      sprint('Números por favor!')
+
+while personagem1_JackNão:
+   sprint(f'{nome}: Não')
+   sprint('Jack não acredita muito em você mas deixa quieto')
+   break
+
+while personagem1_JackSim:
+   sprint(f'{nome}: Sim')
+   sprint('Jack da um sorrisinho malicioso')
+   sprint('Jack, louco do jeito que é, zoa falando pra você entrar no banheiro feminino quando ninguém estiver olhando')
+   resp = input('O que você vai decidir (1)Dar uma de maluco e entrar (2)Não fazer essa maluquice? ')
+   if resp == '1':
+      sprint('Boa idéia')
+      sprint('Você entra no banheiro feminino e avista sua ex e ela liga pra policia')
+      sprint(f'{nome}: Desculpa, errei fui muleque')
+      sprint('Você foi preso')
+      break
+   
+   elif resp == '2':
+   
+      sprint(f'{nome}Vai se lascar, duente')
+      sprint('Jack acha engraçado')
+      sprint('você vai pra perto do banheiro feminino e vê sua...')
+      sprint('Você chegou ao limite da demo, para saber o desfecho dessa história apareça no dia 18 de novembro')
+      break
+   
+   else:
+      sprint('Não tem essa opção')
+      pass
+
+while personagem1_Jackbravo:
+   sprint(f'{nome}:E o quico?')
+   sprint('Jack:É O QUE MENOR!? ')
+   sprint('Jack fica com muita raiva e bate na mesa')
+   sprint('Todo mundo do bar vira a atenção para vocês')
+   personagem1_Jackbravo1 = True
+   break
+
+while personagem1_Jackbravo1:
+   resposta = input(sprint('O que você ira fazer? (1)Pedir desculpas e acalmar Jake (2)Descer a porrada no Jake ou (3)Deixar ele falando sozinho'))
+   
+   if resposta == '1':
+      sprint('Desculpa errei, fui muleke')
+      Desculpas = True
+      break
+   
+   elif resposta == '2':
+      sprint(f'{nome}: Cala a boca maluco!!')
+      sprint('role os dados para ver se você tem sorte')
+      Porrada = True
+      break
+   
+   elif resposta == '3':
+      Deixar_ele_sozinho = True
+      break
+   
+   else:
+      sprint('Jack: repete paspalho!!')
+      pass
+
+while Desculpas:
+   sprint('Jack não acredita muito em você, mas deixa quieto a situação')
+   break
+
+while Porrada:
+   dado = random.randrange(1,6)
+   if dado < 3:
+      sprint('+3 Você da tanta porrada na cara do Jack que ele chora')
+      sprint('Vocês são expulsos do bar e tem uma divida de 2 mil reais por danos')
+      break
+
+   else:
+      sprint('-3 Você toma um Jab de esquerda e é nocauteado')
+      sprint('Vocês são expulsos do bar e tem uma divida de 2 mil reais por danos')
+      break
+      
+while Deixar_ele_sozinho:
+   sprint('Você deixa Jack sózinho')
+   mapa = True
+   break
+
+Guilherme = False
+
+while mapa:
+   sprint('(1)Ir para perto do banheiro Feminino ver se há alguma conhecida ou (2)ir ao banheiro masculino')
+   respos = input('')
+   if respos == '1':
+      sprint('você vai pra perto do banheiro feminino e vê sua...')
+      sprint('Você chegou ao limite da demo, para saber o desfecho dessa história apareça no dia 18 de novembro')
+      break
+   elif respos == '2':
+      sprint('Você vai até o banheiro masculino')
+      Guilherme = True
+      break
+   else:
+      sprint('Lugares novos só no dia 18 de novembro')
+      pass
+
+beber = False
+
+while Guilherme:
+   sprint('Chegando lá você ouve uma voz dizendo: To sentindo cheiro de coelinho rosa')
+   grandam = input('O que você irá fazer??!! (1)Fugir (2)ficar e encarar (3)fingir que não ouviu')
+   if grandam == '1':
+      sprint('Você corre pra caramba e vai pra casa')
+      break
+   elif grandam == '2':
+      sprint('Desconhecido: Senti sua falta nos treinos')
+      sprint(f'{nome}: Espera ai, Guilherme?')
+      sprint('Guilherme: Quer fazer um agachamante não? ')
+      sprint(f'{nome}: Você bebeu vodka ou agua de coco?')
+      sprint('Guilherme: Pra mim tanto faz')
+      sprint('Guilherme: Quer beber comigo? ')
+      beber = True
+      break
+   elif grandam == '3':
+      sprint('Você sente uma mão no seu ombro')
+      sprint('você vira pra trás e é Guilherme seu amigo da academia ')
+      sprint(f'{nome}: Qual é Guilherme ta de vacilação')
+      sprint('Guilherme: Ta faltando bastante nos treinos hein ')
+      sprint(f'{nome}: Cara to sem foco na academia')
+      sprint('Guilherme te faz um discurso motivacional para você se animar pra ir a academia e depois despenca no chão')
+      sprint('Você chama uma hambulancia pra ele, depois disso você vê que está tarde e volta pra sua casa')
+      break
+   else:
+      sprint('Números por favor!')
+      pass
+
+while beber:
+   beberres = input('(1)Você vai beber com Ghilherme ou (2)Vai tentar deixa-lo sóbrio')
+   if beberres == '1':
+      sprint('Vocês beberam a noite toda e esqueceram do resto, você acordano dia seguinte na cama do guilherme sem sentir suas pernas direito, você olha o grupo da empresa e jack vazou seus videos com o guilherme no bar')
+      break
+   elif beberres == '2':
+      sprint('Você vai trocando a vodka dele por água e deixand ele sóbrio, após isso deixa ele na casa dele')
+      break
+
+   else:
+      sprint('Números por apenas!')
+      pass
+while andando:
+   sprint('pra você que foi andando, assalto só na atualização, dia 18 de novembro')
+
+while moto:
+   sprint('SE BEBER NÃO DIRIJA!!!!')
+
+sprint('Fim de jogo!')
+sprint('------Créditos----')
+sprint('Victor Hugo Oliveira')
+sprint('Igor Silva azeredo')
+sprint('Gabriel de Souza Brito')
+
+Encerrarmento = True
+
+while Encerrarmento:
+   encerrar = input('Aperte enter para encerrar ')
+   if encerrar == '':
+      break
+   else:
+      sprint('É enter rapa, lê ai')
+      pass
