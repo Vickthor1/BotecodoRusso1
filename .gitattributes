@@ -9,6 +9,7 @@ def sprint(str):
      sys.stdout.write(c)
      sys.stdout.flush()
      time.sleep(3./90)
+    
 
 sprint(
     'Bem vindo ao "Boteco don Russo", '
@@ -18,9 +19,10 @@ sprint(
     ' !!!ATENÇÃO JOGO HUMORISTICO, QUALQUER SEMELHANÇA COM ALGO REAL É MERA CONHECIDENCIA!!! '
     )
 
-#introdução do jogo
+#Introdução do jogo
 
 nome = input('Qual o seu nome? ')
+
 sprint('Chegou a sexta feira, dia da semana que o filho chora e a mãe não vê, '
       f'{nome} quer curtir a sua grande noite com tudo que ela pode oferecer,'
       )
