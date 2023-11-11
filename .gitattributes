@@ -1,5 +1,5 @@
 """""""""
-Jogo de bar que se chama Bar do Russo, com opções numéricas de acordo com o avanço do game. 
+Jogo de bar que se chama Bar do Russo, as escolhas serão feitas com opções numéricas de acordo com o avanço do game. 
 
 """""""""
 import sys,time,random
@@ -12,9 +12,9 @@ def sprint(str):
 
 sprint(
     'Bem vindo ao "Boteco don Russo", '
-    'como todos o lugar infelizmente a falha é algo inevitavel, mas aqui nesse game é evitavel'
-    'toda a vez que você "falhar", você volta ao inicio do game então, tenha cuidado com quem conversa'
-    '(as escolhas seram feitas com atalho rápido, nas escolhas sem numeração responda o que quiser. Sistema de dinheiro, barra de bebida e modo de jogo, não inclusos na demo)'
+    'como todo o lugar infelizmente a falha é algo inevitavel, mas aqui nesse game é evitavel'
+    'toda a vez que você falhar, você volta ao vai ter que fazer o game todo de novo, tenha cuidado com quem conversa'
+    '(as escolhas seram feitas com atalho rápido, nas escolhas sem numeração responda o que quiser. Sistema de dinheiro, barra de bebida e modo de jogo, não inclusos nem nessa demo e nem na de dia 18 de novembro)'
     )
 
 #introdução do jogo
@@ -27,10 +27,13 @@ sprint('Você vê que tem um bar novo')
 
 começo = True
 
+veiculo = False
+
 while começo:
     bar = input('(1)Você quer ir a esse bar ou (2)não ir e ficar em casa? ')
     if bar == '1':
         sprint('Você decide ir ao bar novo')
+        veiculo = True
         break
     elif bar == '2':
         sprint('Você decide ficar na sua casa assistindo séria e comendo pipoca')
@@ -39,7 +42,6 @@ while começo:
         sprint('Não entendi(digite 1 ou 2)')
         pass
 
-veiculo = True
 moto = False
 andando = False
 
@@ -101,9 +103,10 @@ while barman:
 #fim do dialogo com o Lex
 
 pergunta = False
+
 while personagem1_Jack:
-    sprint(f'{nome}: Fala ai Jake! ')
-    sprint('Jack: Eae,veio aproveitar a sexta?')
+    sprint(f'{nome}: Fala ai Jack! ')
+    sprint('Jack: Eae, veio aproveitar a sexta?')
     sprint(f'{nome}: Sim, essa semana foi tortura')
     sprint('Jack: Vou ficar aqui com você na mesa vlw? e me paga uma cerveja ai')
     sprint('Mas Jack sou eu que to em pé')
@@ -143,6 +146,7 @@ while pergunta:
        break
     else:
       sprint('Números por favor!')
+      pass
 
 while personagem1_JackNão:
    sprint(f'{nome}: Não')
@@ -162,7 +166,6 @@ while personagem1_JackSim:
       break
    
    elif resp == '2':
-   
       sprint(f'{nome}Vai se lascar, duente')
       sprint('Jack acha engraçado')
       sprint('você vai pra perto do banheiro feminino e vê sua...')
@@ -283,6 +286,7 @@ while beber:
    else:
       sprint('Números por apenas!')
       pass
+
 while andando:
    sprint('pra você que foi andando, assalto só na atualização, dia 18 de novembro')
 
@@ -300,6 +304,7 @@ Encerrarmento = True
 while Encerrarmento:
    encerrar = input('Aperte enter para encerrar ')
    if encerrar == '':
+      sprint('Até logo!')
       break
    else:
       sprint('É enter rapa, lê ai')
