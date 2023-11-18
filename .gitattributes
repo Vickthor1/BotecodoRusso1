@@ -331,7 +331,10 @@ while True:
       sprint(Fore.RED + 'INFORMAÇÃO GUARDADA!!')
       mapa = True
       break
-
+   Lulu = False
+   sentarnamesa = False
+   bebercomLulu = False
+   casacomLulu = False
    Guilherme = False
    Alice = False
 
@@ -341,9 +344,7 @@ while True:
       respos = input('')
       if respos == '1':
          print('')
-         sprint('você vai pra perto do banheiro feminino e vê sua...')
-         print('')
-         sprint('Você chegou ao limite da demo, para saber o desfecho dessa história apareça no dia 18 de novembro')
+         Lulu = True
          break
       elif respos == '2':
          print('')
@@ -365,6 +366,98 @@ while True:
    grita = False
    deboa = False
    beber = False
+   
+   while Lulu:
+      Lulubraba = input('Você encontra sua ex namorada na frente do banheiro feminino, opção (1)falar com ela só por educação (2)ir embora')
+
+      if Lulubraba == '2':
+         print('')
+         sprint('Você vai pra casa') 
+         break
+
+      elif Lulubraba == '1':
+         print('')
+         sprint('Vocês conversam e ela pergunta se você não quer se sentar à mesa com ela') 
+         print('')
+         sentarnamesa = True
+         break
+
+   while sentarnamesa:
+      senta = input('(1) Não, eu tô de boa, ir embora ou (2)Sim, o que poderia dar errado? ')
+
+      if senta ==  '1':
+         print('')
+         sprint('Lulu fica meio cabisbaixa, mas deixa você ir embora')
+         print('')
+         break
+      elif senta == '2': 
+         print('')
+         sprint('Nada demais, afinal você já sabe lidar com ela')
+         print('')
+         sprint('Vocês se sentam à mesa e ela pede uma bebida')
+         print('')
+         bebercomLulu = True
+         break
+   while bebercomLulu:
+      bebidinha = input(Fore.MAGENTA + f'Lulu: Quer uma bebida também {nome}? (1)Sim (2)Não ')
+
+      if bebidinha == '1':
+         print(Fore.RESET + '')
+         sprint('Sim, quero me divertir')
+         print('')
+         sprint('Lulu vai ao banheiro')
+         print('')
+         sprint(' O garçom anota os pedidos, mas quem leva o pedido até vocês é uma garçonete, que tenta falar com você')
+         print('')
+         sprint(Fore.LIGHTGREEN_EX + 'Garçonete: Notei que você está sozinho, desculpe incomodar mas vai fazer algo mais tarde?') 
+         print('')
+         sprint(Fore.RESET + 'Antes mesmo de você responder algo…') 
+         print('')
+         sprint(Fore.MAGENTA + 'Lulu: QUEM VOCÊ PENSA QUE É, SUA MOCRÉIA ENSEBADA!') 
+         print('')
+         sprint(Fore.LIGHTGREEN_EX + 'Garçonete: Calma moça você está se alterando')
+         print('')
+         sprint(Fore.RESET + 'Elas começam a discutir e você acalma a Lulu, e se desculpa com a garçonete') 
+         print('')
+         sprint('Lulu fica bolada com você, por você dar razão a garçonete, e joga a bebida na sua cara!') 
+         print('')
+         sprint('A garçonete trás uma toalhinha para você se enxugar e a Lulu vê e fica fazendo birra  e vc vai embora')
+         break
+
+
+      elif bebidinha == '2':
+         print('')
+         sprint('Não, não to muito afim de beber')
+         print('')
+         sprint('Lulu começa a virar todas')
+         print('')
+         sprint(f'{nome}: Hei! Vai com calma')
+         print('')
+         sprint(Fore.MAGENTA + 'Lulu: Eu zeiuqui eu to fazen…')
+         print(Fore.RESET + '')
+         sprint('Lulu da uma soluçada, Você vê que Lulu, não está em condições de ir pra casa, pois bebeu muito')
+         print('')
+         casacomLulu = True
+         break
+      
+   while casacomLulu:
+      casa = input('(1)Levar Lulu para a casa dela ou(2)Convidar Lulu para sua casa? ')
+
+      if casa == '1':
+         print('')
+         sprint('Após levar Lulu a casa dela, você vê que está tarde, e resolve ir pra sua casa ')
+         print('')
+         break
+
+      elif casa == '2':
+         print('')
+         sprint('Você deixa Lulu sóbria') 
+         print('')
+         sprint('Você e Lulu relembram os velhos tempos, "vendo netflix" na sua casa')
+         print('')
+         break
+
+      
    while Alice:
       respalice = input('(1) Você_Grita!! ou (2) ficar de boa e admirando')
       if respalice == '1':
@@ -418,7 +511,7 @@ while True:
       if respa == '1':
          sprint(Fore.LIGHTRED_EX + 'rolagem de dados!!')
          if dado1 <= 3:
-            print('')
+            print(Fore.RESET + '')
             sprint(' você canta tão desafinado que ela começa a Rir')
             print('')
             sprint(' A cantora começa a perder o ar de tanto rir e começa a passar mal')
@@ -430,7 +523,7 @@ while True:
             sprint(' Você e expulso do bar e vai ter que pagar o médico da cantora')
             break
          elif dado1 > 3:
-            print('')
+            print(Fore.RESET + '')
             sprint('Você canta tão bem que ela se impressiona e te chama para o palco e te entrega um microfone')
             print('')
             sprint('após o termino do show ela vai até você')
@@ -477,7 +570,6 @@ while True:
       
       if paquera == '1':
          sprint('Rolagem de dados!!!')
-         
          lulumaluca = True
          break
       elif paquera == '2':
@@ -494,7 +586,7 @@ while True:
          print('')
          sprint(Fore.MAGENTA + 'Lulu: Conseguiu arrumar uma mocréia é, seu paspalho!')
          print('')
-         sprint('Lulu tenta acabar com qualquer chance de amizade ou relacionamento de vocês')
+         sprint(Fore.RESET + 'Lulu tenta acabar com qualquer chance de amizade ou relacionamento de vocês')
          print('')
          sprint(Fore.CYAN + f'{nome}: Para de ser infantiu, eu e você ja era, não vê que está estragando a minha conversa com a  Alice')
          print('')
@@ -502,7 +594,7 @@ while True:
          print('')
          sprint(Fore.YELLOW + 'Alice te defende: Não se acha não ele é um cara bacana e merece mais do que uma maluca empacando as conversas dele')
          print('')
-         sprint('Lulu tenta e puxar o cabelo de Alice e Alice da um murro na cara dela elas começam a discutir e brigar')
+         sprint(Fore.RESET + 'Lulu tenta e puxar o cabelo de Alice e Alice da um murro na cara dela elas começam a discutir e brigar')
          print('')
          sprint('Os seguranças aparecem e separam as duas')
          print('')
@@ -512,7 +604,7 @@ while True:
          print('')
          sprint(Fore.YELLOW + 'Alice te enterrompe: Nossa, parece que eu vou ter que dormir fora hoje né')
          print('')
-         sprint('Você leva Alice pra sua casa e depois de um tempo vocês se conhecem cada vez mais até que acabam morando juntos')
+         sprint(Fore.RESET + 'Você leva Alice pra sua casa e depois de um tempo vocês se conhecem cada vez mais até que acabam morando juntos')
          print(Fore.RESET +'')
          andando = False
          break
@@ -620,7 +712,7 @@ while True:
          sprint(Fore.LIGHTMAGENTA_EX + 'Guilherme: Pra mim tanto faz')
          print('')
          sprint(Fore.LIGHTMAGENTA_EX + 'Guilherme: Quer beber comigo? ')
-         print('')
+         print(Fore.RESET + '')
          beber = True
          andando = False
          break
@@ -702,7 +794,7 @@ while True:
    while moto:
       print('')
       sprint(Fore.RED + 'SE BEBER NÃO DIRIJA!!!!')
-      print('')
+      print(Fore.RESET + '')
       break
    
    result = pyfiglet.figlet_format("Fim de jogo! Obrigado Por jogar!", font = "digital" ) 
