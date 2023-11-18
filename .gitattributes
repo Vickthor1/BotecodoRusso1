@@ -768,7 +768,7 @@ while True:
       assalto = input('(1)reagir e tampar ele na porrada, (2)Dar a carteira pra ele? ')
       if assalto == '1':
        sprint('ROLAGEM DE DADOS!!!')
-       dado4 = random.ranged(1,6)
+       dado4 = random.randrange(1,6)
        mendigo = True
        break
       elif assalto == '2':
@@ -782,7 +782,7 @@ while True:
          sprint('Números apenas!')
          pass
    while mendigo:
-      if dado4 <=3:
+      if dado4 <= 3:
          sprint('O mendigo da uma paulada na sua cabeça, rouba sua carteira e vai embora')
          print('')
          break
