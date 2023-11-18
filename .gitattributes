@@ -43,13 +43,14 @@ while True:
    print(Fore.RESET + '')
    nome = input('Qual o seu nome? ')
    print('')
-   sprint('Chegou a sexta feira, dia da semana que o filho chora e a mãe não vê, '
+   sprint('Chegou a sexta feira, dia da semana que o filho chora e a mãe não vê,'
          f'{nome} quer curtir a sua grande noite com tudo que ela pode oferecer,'
+         'você pega seu telefone e da uma olhada nas suas redes sociais até que...'
          )
-   sprint('Você vê que tem um bar novo')
+   sprint('Você vê que tem um bar novo bem popular na sua cidade')
 
    começo = True
-
+   
    veiculo = False
 
    while começo:
