@@ -32,8 +32,8 @@ class falaJack:
       print('')
       sprint(Fore.BLUE + 'Jack: Mas ai namoral, paga uma breja ai?')
       print('')
-      
       decisam = input(Fore.RESET + '-1 Deixar Jack sózinho e explorar o mapa ou\n -2 bater um papo com Jack')
+      
       if decisam == '1':
          print('')
          sprint(Fore.RESET + 'Jack, vou ter que vazar, vai dar não')
