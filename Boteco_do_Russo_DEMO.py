@@ -1,9 +1,8 @@
-
-
 """""""""
 Jogo de bar que se chama Bar do Russo, as escolhas serão feitas com opções numéricas de acordo com o avanço do game. 
 
 """""""""
+from Eventos import*
 import os
 import pyfiglet
 
@@ -52,12 +51,14 @@ while True:
          input("ENTER para continuar")
    
    #Introdução do jogo
-
+   class pessoa:
+      nome = nome
    print(Fore.RESET + '')
-   nome = input('Qual o seu nome? ')
+   nome = input('Qual o seu self.nome? ')
+   personagem = (nome)
    print('')
    sprint(f"""Chegou a sexta feira, dia da semana que o filho chora e a mãe não vê,\n
-         {nome} quer curtir a sua grande noite com tudo que ela pode oferecer,\n
+         {self.nome} quer curtir a sua grande noite com tudo que ela pode oferecer,\n
          você pega seu telefone e da uma olhada nas suas redes sociais até que...\n         
          """)
    sprint('Você vê que tem um bar novo bem popular na sua cidade')
@@ -135,7 +136,7 @@ while True:
    
    def barman():
       print(Fore.RESET + '')
-      sprint(Fore.CYAN + f'{nome}: Olá boa noite, poderia me servir uma bebida?')
+      sprint(Fore.CYAN + f'{self.nome}: Olá boa noite, poderia me servir uma bebida?')
       print('')
       sprint(Fore.LIGHTBLACK_EX + 'Barman: Por que toda essa formalidade amigão, pode ficar à vontade')
       print('')
@@ -143,13 +144,13 @@ while True:
       print('')
       sprint(Fore.RESET + 'Você acaba não prestando muita atenção nas outras coisas que ele diz')
       print('')
-      bebida = input(Fore.CYAN + f'{nome}: Eu gostaria de pedir ')
+      bebida = input(Fore.CYAN + f'{self.nome}: Eu gostaria de pedir ')
       print('')
       sprint(Fore.RESET + 'Você bate um papo com o Barman e ele te conta a História do Bar e que ele e a filha dele reabriram o bar no Brasil, pelo fato do país deles estarem em guerra e eles não apoiarem isso')
       print('')
-      sprint(Fore.LIGHTBLACK_EX + 'Barman: Você é um bom ouvinte meu jovem, meu nome é Alexandre mas pode e chamar de Lex')
+      sprint(Fore.LIGHTBLACK_EX + 'Barman: Você é um bom ouvinte meu jovem, meu self.nome é Alexandre mas pode e chamar de Lex')
       print('')
-      sprint(Fore.CYAN + f'{nome}: meu nome é {nome}, prazer em conhecer o senhor')
+      sprint(Fore.CYAN + f'{self.nome}: meu self.nome é {self.nome}, prazer em conhecer o senhor')
       print('')
       explorar = input(Fore.RESET + 'Você quer -1 explorar o mapa ou\n -2 quer ir para sua casa? ')
       if explorar == '1':
@@ -164,46 +165,7 @@ while True:
          barman()
    #fim do dialogo com o barman
 
-   def personagem1_Jack():
-      print(Fore.RESET + '')
-      sprint(Fore.CYAN + f'{nome}: Fala ai Jack! ')
-      print('')
-      sprint(Fore.BLUE + 'Jack: Eae, veio aproveitar a sexta?')
-      print('')
-      sprint(Fore.CYAN + f'{nome}: Sim, essa semana foi tortura')
-      print('')
-      sprint(Fore.BLUE + 'Jack: Vou ficar aqui com você na mesa vlw? e me paga uma cerveja ai')
-      print('')
-      sprint(Fore.CYAN + f'{nome}: Mas Jack sou eu que to em pé')
-      print('')
-      sprint(Fore.RESET + 'Vocês começam a rir da situação')
-      print('')
-      sprint(Fore.BLUE + 'Jack: Mas ai namoral, paga uma breja ai?')
-      print('')
-      
-      decisam = input(Fore.RESET + '-1 Deixar Jack sózinho e explorar o mapa ou\n -2 bater um papo com Jack')
-      if decisam == '1':
-         print('')
-         sprint(Fore.RESET + 'Jack, vou ter que vazar, vai dar não')
-         print('')
-         mapa()
-         limpar_terminal()
-         
-      elif decisam == '2':
-         print('')
-         sprint(Fore.CYAN + f'{nome}: Ta bom mano, desce uma cerveja pra esse maluco aqui!')
-         print('')
-         sprint(Fore.RESET + 'Você olha pro banheiro feminino e tem uma leve impressam de ter visto um rosto conhecido indo pra dentro do banheiro')
-         print('')
-         sprint(Fore.BLUE + f'Jack: O que é que foi hein {nome}, ta de olho em alguma gatinha? ')
-         print('')
-         pergunta()
-         limpar_terminal()
-         
-      else:
-         print(Fore.RESET + '')
-         sprint('Números por favor!') 
-
+   
    def pergunta():
       print(Fore.RESET + '')
       pandora = input('Chegou a hora, qual decisão será feita, você vai falar que -1 sim, vai dizer que\n -2 não ou (3)Ser grosso')
@@ -228,7 +190,7 @@ while True:
 
    def personagem1_JackNao():
       print('')
-      sprint(Fore.CYAN + f'{nome}: Não')
+      sprint(Fore.CYAN + f'{self.nome}: Não')
       print('')
       sprint(Fore.RESET + 'Jack não acredita muito em você mas deixa quieto')
       print('')
@@ -236,7 +198,7 @@ while True:
       
 
    def personagem1_JackSim():
-      sprint(Fore.CYAN + f'{nome}: Sim')
+      sprint(Fore.CYAN + f'{self.nome}: Sim')
       print('')
       sprint(Fore.RESET + 'Jack da um sorrisinho malicioso')
       print('')
@@ -245,11 +207,11 @@ while True:
       resp = input(Fore.RESET + 'O que você vai decidir -1 Dar uma de maluco e entrar\n -2 Não fazer essa maluquice? ')
       if resp == '1':
          print('')
-         sprint(Fore.CYAN + f'{nome}: Boa idéia')
+         sprint(Fore.CYAN + f'{self.nome}: Boa idéia')
          print('')
          sprint(Fore.RESET + 'Você entra no banheiro feminino e avista sua ex e ela liga pra policia')
          print('')
-         sprint(Fore.CYAN + f'{nome}: Desculpa, errei fui muleque')
+         sprint(Fore.CYAN + f'{self.nome}: Desculpa, errei fui muleque')
          print('')
          sprint(Fore.RESET + 'Você foi preso')
          limpar_terminal()
@@ -257,7 +219,7 @@ while True:
       
       elif resp == '2':
          print('')
-         sprint(Fore.CYAN + f'{nome}Vai se lascar, duente')
+         sprint(Fore.CYAN + f'{self.nome}Vai se lascar, duente')
          print('')
          sprint(Fore.RESET + 'Jack acha engraçado')
          print('')
@@ -273,7 +235,7 @@ while True:
          
 
    def personagem1_Jackbravo():
-      sprint(Fore.CYAN + f'{nome}:E o quico?')
+      sprint(Fore.CYAN + f'{self.nome}:E o quico?')
       print('')
       sprint(Fore.BLUE + 'Jack: É O QUE MENOR!? ')
       print('')
@@ -290,14 +252,14 @@ while True:
       
       if resposta == '1':
          print('')
-         sprint(Fore.CYAN + f'{nome}: Desculpa errei, fui muleke')
+         sprint(Fore.CYAN + f'{self.nome}: Desculpa errei, fui muleke')
          Desculpas = True
          limpar_terminal()
          
       
       elif resposta == '2':
          print('')
-         sprint(Fore.CYAN + f'{nome}: Cala a boca maluco!!')
+         sprint(Fore.CYAN + f'{self.nome}: Cala a boca maluco!!')
          print('')
          sprint(Fore.RESET + 'role os dados para ver se você tem sorte')
          limpar_terminal()
@@ -414,7 +376,7 @@ while True:
          
       
    def bebercomLulu():
-      bebidinha = input(Fore.MAGENTA + f'Lulu: Quer uma bebida também {nome}?\n -1 Sim\n -2 Não ')
+      bebidinha = input(Fore.MAGENTA + f'Lulu: Quer uma bebida também {self.nome}?\n -1 Sim\n -2 Não ')
 
       if bebidinha == '1':
          print(Fore.RESET + '')
@@ -447,7 +409,7 @@ while True:
          print('')
          sprint('Lulu começa a virar todas')
          print('')
-         sprint(f'{nome}: Hei! Vai com calma')
+         sprint(f'{self.nome}: Hei! Vai com calma')
          print('')
          sprint(Fore.MAGENTA + 'Lulu: Eu zeiuqui eu to fazen…')
          print(Fore.RESET + '')
@@ -578,9 +540,9 @@ while True:
       print('')
       sprint('Vocês conversam bastante, até que ela se apresenta...')
       print('')
-      sprint(Fore.YELLOW + 'Alice: Você é muito engraçado alias,meu nome é Alice qual eo seu ?')
+      sprint(Fore.YELLOW + 'Alice: Você é muito engraçado alias,meu self.nome é Alice qual eo seu ?')
       print('')
-      sprint(Fore.CYAN + f'{nome}: Meu nome é {nome} adorei você cantando no palco')
+      sprint(Fore.CYAN + f'{self.nome}: Meu self.nome é {self.nome} adorei você cantando no palco')
       print('')
       sprint(Fore.RESET + 'Você descobre que o dono do bar é o pai da Alice, e que ela ajuda o pai dela a gerar renda extra pro bar cantando')
       print('')
@@ -615,7 +577,7 @@ while True:
          print('')
          sprint(Fore.RESET + 'Lulu tenta acabar com qualquer chance de amizade ou relacionamento de vocês')
          print('')
-         sprint(Fore.CYAN + f'{nome}: Para de ser infantiu, eu e você ja era, não vê que está estragando a minha conversa com a  Alice')
+         sprint(Fore.CYAN + f'{self.nome}: Para de ser infantiu, eu e você ja era, não vê que está estragando a minha conversa com a  Alice')
          print('')
          sprint(Fore.MAGENTA + 'Lulu: Você sabe bem que nenhuma outra mulher e melhor que euzinha aqui')
          print('')
@@ -627,7 +589,7 @@ while True:
          print('')
          sprint(Fore.MAGENTA + 'Lulu: Eu vou te pegar, eu sei onde você mora sua baranga!')
          print('')
-         sprint(Fore.CYAN + f'{nome}: Alice me desculpa pela situação eu não queria que...')
+         sprint(Fore.CYAN + f'{self.nome}: Alice me desculpa pela situação eu não queria que...')
          print('')
          sprint(Fore.YELLOW + 'Alice te enterrompe: Nossa, parece que eu vou ter que dormir fora hoje né')
          print('')
@@ -746,11 +708,11 @@ while True:
       elif grandam == '2':
          sprint(Fore.LIGHTMAGENTA_EX + 'Desconhecido: Senti sua falta nos treinos')
          print('')
-         sprint(Fore.CYAN + f'{nome}: Espera ai, Guilherme?')
+         sprint(Fore.CYAN + f'{self.nome}: Espera ai, Guilherme?')
          print('')
          sprint(Fore.LIGHTMAGENTA_EX + 'Guilherme: Quer fazer um agachamante não? ')
          print('')
-         sprint(Fore.CYAN + f'{nome}: Você bebeu vodka ou agua de coco?')
+         sprint(Fore.CYAN + f'{self.nome}: Você bebeu vodka ou agua de coco?')
          print('')
          sprint(Fore.LIGHTMAGENTA_EX + 'Guilherme: Pra mim tanto faz')
          print('')
@@ -765,11 +727,11 @@ while True:
          sprint(Fore.RESET + 'Você sente uma mão no seu ombro')
          sprint('você vira pra trás e é Guilherme seu amigo da academia ')
          print('')
-         sprint(Fore.CYAN + f'{nome}: Qual é Guilherme ta de vacilação')
+         sprint(Fore.CYAN + f'{self.nome}: Qual é Guilherme ta de vacilação')
          print('')
          sprint(Fore.LIGHTMAGENTA_EX + 'Guilherme: Ta faltando bastante nos treinos hein ')
          print('')
-         sprint(Fore.CYAN + f'{nome}: Cara to sem foco na academia')
+         sprint(Fore.CYAN + f'{self.nome}: Cara to sem foco na academia')
          print('')
          sprint(Fore.LIGHTMAGENTA_EX + 'Guilherme te faz um discurso motivacional para você se animar pra ir a academia e depois despenca no chão')
          print('')
@@ -821,7 +783,7 @@ while True:
          break
          
       elif assalto == '2':
-         sprint(f'{nome}: Toma pode ficar')
+         sprint(f'{self.nome}: Toma pode ficar')
          print('')
          sprint('Você vai pra casa sem a carteira')
          print('')
