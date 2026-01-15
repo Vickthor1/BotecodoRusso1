@@ -3,6 +3,7 @@ Jogo de bar que se chama Bar do Russo, as escolhas serão feitas com opções nu
 
 """""""""
 from Eventos import*
+from base import*
 import os
 import pyfiglet
 
@@ -12,6 +13,7 @@ init()
 
 import sys,time,random
 
+#O jogo era feito em whiles mas vou passar para funções
 def sprint(str):
    for c in str + '\n':
      sys.stdout.write(c)
@@ -28,11 +30,15 @@ def sprint(str):
      time.sleep(3./90)
      
 andando = False
-class pessoa:
-      print(Fore.RESET + '')
-      nome = input('Qual o seu nome? ')
-   
+
+def Pessoa():
+   nome = input("Qual o nome do seu personagem? ")
+   return nome
+
+nome = Pessoa()
+
 while True:
+   
    sprint(f"""
       Bem vindo ao "Boteco don Russo",\n
       como todo o lugar infelizmente a falha é algo inevitavel, mas aqui nesse game é evitavel\n
@@ -44,15 +50,30 @@ while True:
    
    #Aqui o usuario decide se quer limpar ou não o texto ao jogar
    sprint(f"O jogo conta com 2 opções de jogo, uma você conta com a função de apagar mensagens com enter\n a outra sem essa função mas o enter continua os dialogos")
-   opcao = int(input(f"-1 Apagar mensagens com ENTER\n -2 Não apagar mensagens com ENTER\n Escolha: "))
+   
+   def mensagem():
+      opcao = input(f"-1 Apagar mensagens com ENTER\n -2 Não apagar mensagens com ENTER\n Escolha: ")
+      if opcao == '1':
+      
+         return opcao
+      elif opcao =='2':
+         
+         return opcao
+      
+      else:
+         mensagem()
+      
+   opcao = mensagem()
+   
+   mendigo = False
    
    def limpar_terminal():
-      if opcao ==1:
+      if opcao =='1':
          input("ENTER para continuar")
          os.system("cls")
-      elif opcao == 2:
+      elif opcao == '2':
          input("ENTER para continuar")
-   
+      
    #Introdução do jogo
    print(Fore.RESET + '')
    print('')
@@ -110,6 +131,46 @@ while True:
 
    comeco()
    
+   def personagem1_Jack():
+      print(Fore.RESET + '')
+      sprint(Fore.CYAN + f'{nome}: Fala ai Jack! ')
+      print('')
+      sprint(Fore.BLUE + 'Jack: Eae, veio aproveitar a sexta?')
+      print('')
+      sprint(Fore.CYAN + f'{nome}: Sim, essa semana foi tortura')
+      print('')
+      sprint(Fore.BLUE + 'Jack: Vou ficar aqui com você na mesa vlw? e me paga uma cerveja ai')
+      print('')
+      sprint(Fore.CYAN + f'{nome}: Mas Jack sou eu que to em pé')
+      print('')
+      sprint(Fore.RESET + 'Vocês começam a rir da situação')
+      print('')
+      sprint(Fore.BLUE + 'Jack: Mas ai namoral, paga uma breja ai?')
+      print('')
+      decisam = input(Fore.RESET + '-1 Deixar Jack sózinho e explorar o mapa ou\n -2 bater um papo com Jack')
+      
+      if decisam == '1':
+         print('')
+         sprint(Fore.RESET + 'Jack, vou ter que vazar, vai dar não')
+         print('')
+         mapa()
+         limpar_terminal()
+         
+      elif decisam == '2':
+         print('')
+         sprint(Fore.CYAN + f'{nome}: Ta bom mano, desce uma cerveja pra esse maluco aqui!')
+         print('')
+         sprint(Fore.RESET + 'Você olha pro banheiro feminino e tem uma leve impressam de ter visto um rosto conhecido indo pra dentro do banheiro')
+         print('')
+         sprint(Fore.BLUE + f'Jack: O que é que foi hein {nome}, ta de olho em alguma gatinha? ')
+         print('')
+         pergunta()
+         limpar_terminal()
+         
+      else:
+         print(Fore.RESET + '')
+         sprint('Números por favor!')
+      
    def amigo():
       print('')
       sprint(Fore.RESET + 'Você vê que tem um amigo seu lá')
@@ -120,8 +181,8 @@ while True:
          sprint('Você decide falar com ele')
          print('')
          limpar_terminal() 
-         personagem1_Jack()
          
+                  
       elif primeira_fala == '2':
          print('')
          sprint('Você ignora o Jack e logo vai falar com o barman')
@@ -252,7 +313,7 @@ while True:
       if resposta == '1':
          print('')
          sprint(Fore.CYAN + f'{nome}: Desculpa errei, fui muleke')
-         Desculpas = True
+         Desculpas()
          limpar_terminal()
          
       
@@ -304,7 +365,7 @@ while True:
       sprint(Fore.RESET + 'Você deixa Jack sózinho')
       print('')
       sprint(Fore.RED + 'INFORMAÇÃO GUARDADA!!')
-      mapa = True
+      mapa()
       limpar_terminal()
       
 
@@ -314,7 +375,7 @@ while True:
       respos = input('')
       if respos == '1':
          print('')
-         Lulu = True
+         Lulu()
          limpar_terminal()
          
       elif respos == '2':

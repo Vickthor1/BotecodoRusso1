@@ -11,11 +11,11 @@ def sprint(str):
      
 from Boteco_do_Russo_DEMO import*
 
-def __init__(self):
-    self.nome = pessoa.nome
+
 
 class falaJack:
-    
+    def __init__(self):
+      self.nome = nome
     def personagem1_Jack(self):
       print(Fore.RESET + '')
       sprint(Fore.CYAN + f'{self.nome}: Fala ai Jack! ')
