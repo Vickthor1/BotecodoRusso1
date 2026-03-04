@@ -1,3 +1,4 @@
+''''''''''
 """""""""
 Jogo de bar que se chama Bar do Russo - VERSÃO REFATORADA
 Todas as funções conectadas de forma clara e organizada
@@ -655,3 +656,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+'''''''''''

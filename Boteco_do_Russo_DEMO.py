@@ -1,3 +1,4 @@
+'''''''''
 """""""""
 Jogo de bar que se chama Bar do Russo, as escolhas serão feitas com opções numéricas de acordo com o avanço do game. 
 
@@ -863,3 +864,4 @@ while True:
       sprint(Fore.RESET + 'Tchau!')
       limpar_terminal()
       
+'''''''''
