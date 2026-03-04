@@ -181,8 +181,7 @@ while True:
          sprint('Você decide falar com ele')
          print('')
          limpar_terminal() 
-         
-                  
+          
       elif primeira_fala == '2':
          print('')
          sprint('Você ignora o Jack e logo vai falar com o barman')
@@ -193,38 +192,6 @@ while True:
          print('')
          print('Não compreendi(digite 1 ou 2)')
          amigo()
-   
-   def barman():
-      print(Fore.RESET + '')
-      sprint(Fore.CYAN + f'{nome}: Olá boa noite, poderia me servir uma bebida?')
-      print('')
-      sprint(Fore.LIGHTBLACK_EX + 'Barman: Por que toda essa formalidade amigão, pode ficar à vontade')
-      print('')
-      sprint(Fore.LIGHTBLACK_EX + 'Barman: Temos, vodka, cachaça, whisky, vinho, skol, heineken, brahma, Itaipava...')
-      print('')
-      sprint(Fore.RESET + 'Você acaba não prestando muita atenção nas outras coisas que ele diz')
-      print('')
-      bebida = input(Fore.CYAN + f'{nome}: Eu gostaria de pedir ')
-      print('')
-      sprint(Fore.RESET + 'Você bate um papo com o Barman e ele te conta a História do Bar e que ele e a filha dele reabriram o bar no Brasil, pelo fato do país deles estarem em guerra e eles não apoiarem isso')
-      print('')
-      sprint(Fore.LIGHTBLACK_EX + 'Barman: Você é um bom ouvinte meu jovem, meu nome é Alexandre mas pode e chamar de Lex')
-      print('')
-      sprint(Fore.CYAN + f'{nome}: meu nome é {nome}, prazer em conhecer o senhor')
-      print('')
-      explorar = input(Fore.RESET + 'Você quer -1 explorar o mapa ou\n -2 quer ir para sua casa? ')
-      if explorar == '1':
-         mapa()
-         limpar_terminal()
-         
-      elif explorar =='2':
-         limpar_terminal()
-         
-      else:
-         sprint(Fore.LIGHTRED_EX + 'Só números')
-         barman()
-   #fim do dialogo com o barman
-
    
    def pergunta():
       print(Fore.RESET + '')
