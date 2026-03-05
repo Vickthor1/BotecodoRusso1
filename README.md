@@ -1,7 +1,7 @@
 # Boteco do Russo - Versão Final Unificada
 
 ## 📋 Descrição
-Esta é a versão final unificada do jogo "Boteco do Russo", que combina o código original com as melhorias da refatoração modular. Todo o jogo está contido em um único arquivo Python, facilitando a distribuição e execução.
+Esta é a versão demo unificada do jogo "Boteco do Russo", que combina o código original com as melhorias da refatoração modular. Todo o jogo está contido em um único arquivo Python, facilitando a distribuição e execução.
 
 ## 🎮 Sobre o Jogo
 "Boteco do Russo" é um jogo de aventura textual humorístico ambientado em um bar. O jogador toma decisões que afetam o desenrolar da história, encontrando diversos personagens e enfrentando situações bem aleatórias.
