@@ -4,15 +4,15 @@
 Esta é a versão final unificada do jogo "Boteco do Russo", que combina o código original com as melhorias da refatoração modular. Todo o jogo está contido em um único arquivo Python, facilitando a distribuição e execução.
 
 ## 🎮 Sobre o Jogo
-"Boteco do Russo" é um jogo de aventura textual humorístico ambientado em um bar. O jogador toma decisões que afetam o desenrolar da história, encontrando diversos personagens e enfrentando situações inesperadas.
+"Boteco do Russo" é um jogo de aventura textual humorístico ambientado em um bar. O jogador toma decisões que afetam o desenrolar da história, encontrando diversos personagens e enfrentando situações bem aleatórias.
 
 ### Personagens Principais:
-- **Lex (Barman)**: O dono do bar, sempre pronto para uma conversa. Agora com interações expandidas incluindo missões, segredos e apresentação de familiares
-- **Natasha**: Irmã misteriosa de Lex, vidente especializada em leitura de cartas do tarô e guardiã dos segredos do bar
-- **Jack**: Amigo do jogador, sempre causando confusão
-- **Lulu**: Ex-namorada do jogador, cheia de surpresas
+- **Lex**: O dono do bar, sempre pronto para uma conversa. Agora com interações expandidas incluindo missões, segredos e apresentação de familiares
+- **Natasha**: Irmã misteriosa de Lex, vidente especializada em leitura de cartas de tarô e guardiã dos segredos do bar
+- **Jack**: Amigo, sempre causando confusão
+- **Lulu**: Ex-namorada, cheia de surpresas
 - **Alice**: Cantora talentosa, filha do dono do bar
-- **Guilherme**: Amigo da academia, com problemas com bebida
+- **Guilherme**: Amigo da academia, tem problemas com bebida
 
 ## 🚀 Como Jogar
 1. Execute o arquivo `Boteco_do_Russo_FINAL.py`
@@ -34,16 +34,16 @@ O arquivo único contém:
 
 ## 📝 Instalação das Dependências
 ```bash
-pip install colorama pyfiglet
+pip install -r requirements.txt
 ```
 
 ## 🎯 Melhorias Implementadas
 - **Código Modular**: Mesmo em um arquivo único, o código está organizado em classes
-- **Manutenibilidade**: Fácil de adicionar novos personagens ou modificar diálogos
+- **Manutenibilidade**: Fácil de adicionar novos personagens ou modificar diálogos, aceito sugestões de melhoria
 - **Reutilização**: Classes podem ser instanciadas conforme necessário
 - **Testabilidade**: Cada interação pode ser testada independentemente
 - **Novas Funcionalidades do Lex**: Sistema de confiança, missões especiais, apresentação de Natasha, drinks exóticos
-- **Personagem Natasha**: Nova personagem com leitura de cartas do tarô, conselhos sobre o futuro, revelação de segredos
+- **Personagem Natasha**: Nova personagem com leitura de cartas de tarô, conselhos sobre o futuro, revelação de segredos
 - **Sistema de Relacionamentos**: Níveis de confiança e intimidade que afetam as conversas disponíveis
 - **Missões Interativas**: Sistema de missões com múltiplos desfechos baseado nas escolhas do jogador
 
@@ -55,4 +55,5 @@ pip install colorama pyfiglet
 Este é um jogo humorístico. Qualquer semelhança com pessoas reais é mera coincidência.
 
 ---
-*Divirta-se no Boteco do Russo!* 🍻
+*Divirta-se no Boteco do Russo!*
+<h1>🍻<h1>
